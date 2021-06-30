@@ -1,16 +1,19 @@
-{% extends "layout.html" %} {% block page %} {% endblock %} {% block content %}
-<h1>Register</h1>
-{% endblock %} {% block content %}
-<div class="register-form">
-    <form id="register-form" action="/register" method="POST">
-        <label>Username</label>
-        <input type="text" name="username" placeholder="Username" required>
+{% extends "layout.html" %} {% block page %}
 
-        <label>Password</label>
-        <input type="password" name="password" placeholder="Password" required>
+<body class="register-page">{% endblock %}
+    <p>{{ title }}</p>
 
-        <input type="submit" value="Login">
-        <!-- <button>Sign Up</button> -->
-    </form>
-</div>
-{% endblock %}
+    {% block content %}
+    <div class="register-form">
+        <form id="register-form" action="/register" method="POST">
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Username" required>
+
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Password" required>
+
+            <input type="submit" value="Login">
+            <!-- <button>Sign Up</button> -->
+        </form>
+    </div>
+    {% endblock %}
