@@ -5,15 +5,18 @@
 
     {% block content %}
     <div class="login-form">
-        <form id="login-form" action="/login" method="POST">
+        <form id="login-form" action="{{ url_for('login') }}" method="POST">
             <label>Username</label>
             <input type="text" name="username" placeholder="Username" required>
 
             <label>Password</label>
             <input type="password" name="password" placeholder="Password" required>
 
-            <input type="submit" value="Login">
+            <input type="submit" value="Submit">
             <!-- <button>Sign Up</button> -->
         </form>
     </div>
     {% endblock %}
+
+
+    <!-- https://codepen.io/banunn/pen/AFnal -->
