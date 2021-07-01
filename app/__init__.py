@@ -4,8 +4,6 @@ from dotenv import load_dotenv
 import smtplib
 from email.mime.text import MIMEText
 from werkzeug.security import check_password_hash, generate_password_hash
-# from . import db
-# from app.db import get_db
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
@@ -35,6 +33,9 @@ class UserModel(db.Model):
 
     def __repr__(self):
         return f"<User {self.username}>"
+
+        
+
 
 @app.route('/')
 def index():
