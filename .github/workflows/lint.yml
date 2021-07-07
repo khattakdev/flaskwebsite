@@ -15,23 +15,23 @@ jobs:
     name: Run linters
     runs-on: ubuntu-latest
 
-  steps:
-    - name: Check out Git repository
-      uses: actions/checkout@v2
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.9
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9
 
-    - name: Install Python dependencies
-      run: pip install black flake8
+      - name: Install Python dependencies
+        run: pip install black flake8
 
-    - name: Run linters
-      uses: wearerequired/lint-action@v1.10.0
-      with:
-        black: true
-        flake8: true
+      - name: Run linters
+        uses: wearerequired/lint-action@v1.10.0
+        with:
+          black: true
+          flake8: true
 
-    - name: Build and push Docker images
-      uses: docker/build-push-action@v2.6.1
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v2.6.1
