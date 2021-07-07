@@ -1,6 +1,6 @@
 # Flask-Blog
 
-Minimal Flask template to get started on your blog application for MLH Fellowship Production Engineering track.
+Minimal Flask template to get started on your blog application for MLH Fellowship Production Engineering track!!
 
 
 ## Installation
